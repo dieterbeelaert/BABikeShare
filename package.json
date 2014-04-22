@@ -1,0 +1,10 @@
+{
+    "name":"BABikeShare",
+    "description":"mobile web app for Bay Area Bike share",
+    "author":"Dieter Beelaert",
+    "dependencies": {
+        "express": ">= 1.2.0",
+        "ejs": ">= 1.0.0",
+        "request": ">= 1.0.0"
+}
+}
