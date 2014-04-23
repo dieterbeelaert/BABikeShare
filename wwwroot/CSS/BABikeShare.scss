@@ -1,0 +1,70 @@
+/*Color variables */
+$blue: #0066FF;
+
+body {
+  padding-top: 50px; /*needed for the fixed navbar */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.listRow{
+  border-bottom:1px solid grey;
+  clear:both;
+  cursor: pointer;
+}
+/*highlight the values of available bikes */
+.highlight{
+  color: $blue;
+  font-weight:bold;
+}
+
+/*top navigation styling */
+nav{
+  text-align:center;
+  font-size: 1.27em;
+}
+.navbar-default{
+  background-color:$blue;
+  border-color:$blue;
+}
+
+ /*Helper classes for alignment of the*/
+.right{
+  float:right;
+  margin-right: 0.677em;
+}
+
+#mapImg{
+ text-align:center;
+}
+
+#stationDetails{
+  margin: 2em;
+  font-size: 1.1em;
+}
+
+/*Center align the google maps image */
+#mapHolder{
+  width: 288px;/*static API will always return image that is 288 px wide*/
+  margin: 0 auto;
+}
+
+
+
+/*styling of the 'back button" in the detail view*/
+.btnBack{
+  cursor: pointer;
+  height: 3em;
+  width: 100%;
+  background-color:#DDDDDD;
+  color:#444444;
+  p{
+    margin-left: 2em;
+    margin-top:0.9em;
+    display:inline-block;
+  }
+}
+
+/*general styling */
+h4,h5{
+  font-weight:bold;
+}

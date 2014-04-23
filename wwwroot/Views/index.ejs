@@ -5,25 +5,42 @@
     <title>Bay Area Bike share</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/wwwroot/CSS/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/wwwroot/CSS/BABikeShare.css"/>
 </head>
 <body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <p class="navbar-text">Bay Area Bike Share</p>
+</nav>
     <div ng-controller="stationController">
-        <table>
-           <tr ng-repeat="station in stations" ng-show="listView" ng-click="doDetailView(station)">
-               <td>{{station.stationName}}</td>
-               <td>{{station.availableBikes}}</td>
-               <td>/ {{station.availableDocks}}</td>
-               <td>{{station.distance}}</td>
-           </tr>
-        </table>
+        <div ng-show="listView">
+           <div ng-repeat="station in stations" ng-click="doDetailView(station)" class="listRow">
 
+               <div class="right">
+                  <span class="highlight">{{station.availableBikes}}</span> / {{station.availableDocks}}
+               </div>
+                    <h5>{{station.stationName}}</h5>
+                    {{station.distance}}
+
+
+
+           </div>
+        </div>
         <div ng-show="detailView">
-            <h2>{{selectedStation.stationName}}</h2>
-            <a href="{{mapLink}}"><img src="{{mapDetail}}"/></a>
-            <section>{{selectedStation.availableBikes}} available bikes</section>
-            <section>{{selectedStation.availableDocks}} available docks</section>
+            <h4>{{selectedStation.stationName}}</h4>
 
-            <button ng-click="doListView()">Back to list</button>
+            <div id="mapHolder">
+                <a href="{{mapLink}}"><img id="mapImg" src="{{mapDetail}}"/></a>
+            </div>
+
+            <div id="stationDetails">
+                <section><span class="highlight">{{selectedStation.availableBikes}}</span> available bikes</section>
+                <section>{{selectedStation.availableDocks}} available docks</section>
+            </div>
+
+            <div class="btnBack" ng-click="doListView()">
+                <p><i class="glyphicon glyphicon-arrow-left"></i> Back to list</p>
+            </div>
         </div>
     </div>
     <script src="/wwwroot/JS/angular.min.js"></script>
