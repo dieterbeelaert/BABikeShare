@@ -1,7 +1,7 @@
 /**
  * Created by Dieter Beelaert on 22/04/2014.
  */
-var BABikeShare = angular.module('BABikeShare',[]);
+var BABikeShare = angular.module('BABikeShare',['ngAnimate']);
 
 BABikeShare.controller('stationController', function($scope,$http){
 
