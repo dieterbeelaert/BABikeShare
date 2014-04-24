@@ -82,11 +82,13 @@ nav{
 .rightSlide.ng-hide-add.ng-hide-add-active,
 .rightSlide.ng-hide-remove {
   left:100%;
+  opacity:0;
 }
 
 .rightSlide.ng-hide-add,
 .rightSlide.ng-hide-remove.ng-hide-remove-active {
   left:0;
+  opacity:1;
 }
 
 
