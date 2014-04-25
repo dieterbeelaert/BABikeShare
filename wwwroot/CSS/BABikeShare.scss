@@ -18,15 +18,22 @@ h4,h5{
 }
  /*Styling of each item in the list of stations */
 .listRow{
+  padding: 0.4em;
   border-bottom:1px solid grey;
   clear:both;
   cursor: pointer;
+  position:relative;
 }
 
 /*top navigation styling */
 nav{
   text-align:center;
   font-size: 1.27em;
+
+  .navbar-text{
+    font-weight:bold;
+    letter-spacing: 0.05em;
+  }
 }
 .navbar-default{
   background-color:$blue;
@@ -36,7 +43,12 @@ nav{
  /*Helper classes for alignment of the*/
 .right{
   float:right;
-  margin-right: 0.677em;
+  position:absolute;
+  margin-right:0.677em;
+  height:1em;
+  right:0;
+  top:50%;
+
 }
 
 #mapImg{
