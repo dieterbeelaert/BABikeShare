@@ -73,7 +73,6 @@ BABikeShare.controller('stationController', function($scope,$http){
            }
         });
     }
-
 });
 
 
